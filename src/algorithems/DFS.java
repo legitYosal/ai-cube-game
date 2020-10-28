@@ -3,14 +3,14 @@ package algorithems;
 import models.State;
 
 import java.util.LinkedList;
-import java.util.Queue;
+// import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class BFS {
+public class DFS {
 
     public static void solve(State start) {
-        System.out.println("starting bfs");
+        System.out.println("starting dfs");
         int count = 0;
         if (start.isFinal()) {
             start.print();
@@ -18,7 +18,7 @@ public class BFS {
         }
 
         Set<State> visitedList = new TreeSet<>();
-        Queue<State> fringe = new LinkedList<>();
+        LinkedList<State> fringe = new LinkedList<>();
         fringe.add(start);
 
         while (!fringe.isEmpty()) {
@@ -34,7 +34,7 @@ public class BFS {
                 return;
             }
 
-            fringe.addAll(temp.makeChild());
+            fringe.addAll(0, temp.makeChild());
         }
 
         System.out.println("not found");

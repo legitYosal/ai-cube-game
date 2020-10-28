@@ -1,4 +1,7 @@
 import algorithems.BFS;
+import algorithems.DFS;
+
+
 import models.Board;
 import models.Cube;
 import models.State;
@@ -24,7 +27,8 @@ public class Main {
         }
 
         State start = new State(new Board(length, height, map.toString(), new Cube(x, y)));
-        BFS.solve(start);
+        // BFS.solve(start);
+        DFS.solve(start);
         scanner.close();
     }
 
