@@ -25,6 +25,7 @@ public class Main {
 
         State start = new State(new Board(length, height, map.toString(), new Cube(x, y)));
         BFS.solve(start);
+        scanner.close();
     }
 
     /*

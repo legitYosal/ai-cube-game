@@ -10,7 +10,7 @@ import java.util.TreeSet;
 public class BFS {
 
     public static void solve(State start) {
-
+        System.out.println("starting bfs");
         int count = 0;
         if (start.isFinal()) {
             start.print();
