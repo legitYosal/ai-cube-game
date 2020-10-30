@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class State implements Comparable<State> {
 
-    private int depth;
+    public int depth;
     private Board board;
     private State parent;
     private int action;
